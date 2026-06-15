@@ -1,214 +1,616 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>연남 룸싸롱 TOP5 | 프리미엄 접대 & 비즈니스 공간</title>
+    <meta name="description" content="연남동 룸싸롱 TOP5 선정 기준과 실사용자 리뷰 기반 분석. 2025년 연남동 접대 문화의 정석. 전화 010-6279-0862로 예약 문의.">
+    <meta name="keywords" content="연남 룸싸롱, 연남동 룸싸롱, 연남 룸싸롱 TOP5, 연남동 접대, 연남동 유흥, 연남 룸싸롱 추천, 연남동 비즈니스 접대">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b07-yn-room-top5.vercel.app/">
+    <meta property="og:title" content="연남 룸싸롱 TOP5 | 프리미엄 접대 & 비즈니스 공간">
+    <meta property="og:description" content="연남동 룸싸롱 TOP5 선정 기준과 실사용자 리뷰. 2025년 접대 문화의 기준을 제시합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b07-yn-room-top5.vercel.app/">
+    <meta property="og:image" content="og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="연남 룸싸롱 TOP5 | 프리미엄 접대 & 비즈니스 공간">
+    <meta name="twitter:description" content="연남동 룸싸롱 TOP5 선정 기준과 실사용자 리뷰. 2025년 접대 문화의 기준을 제시합니다.">
+    <meta name="twitter:image" content="og-image.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "연남 룸싸롱 TOP5 선정 리스트",
+        "description": "연남동 지역 프리미엄 룸싸롱 TOP5 정보 제공. 리뷰 기반 선정.",
+        "url": "https://t3b07-yn-room-top5.vercel.app/",
+        "telephone": "010-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "서울특별시 마포구 연남동"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울특별시",
+            "addressRegion": "마포구",
+            "addressCountry": "KR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "bestRating": "5",
+            "ratingCount": "184"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 18px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Impact', 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.3;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 72px;
+        }
+        /* 헤더 */
+        header {
+            border-bottom: 4px solid #ff3b00;
+            padding: 24px 0;
+            background: #000000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2.2rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: #ff3b00;
+            text-decoration: none;
+        }
+        .logo span { color: #ffffff; }
+        nav ul { display: flex; gap: 32px; list-style: none; }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border: 3px solid transparent;
+            padding: 8px 12px;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            border-color: #ff3b00;
+            color: #ff3b00;
+        }
+        .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; background: none; border: none; padding: 8px; }
+        .hamburger span { display: block; width: 32px; height: 4px; background: #ffffff; }
+        @media (max-width: 768px) {
+            .container { padding: 0 24px; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #000000; border-bottom: 4px solid #ff3b00; padding: 24px; gap: 16px; }
+            nav ul.active { display: flex; }
+            .hamburger { display: flex; }
+        }
+
+        /* 히어로 */
+        .hero {
+            margin: 0;
+            padding: 120px 72px;
+            background: #000000;
+            border-bottom: 4px solid #ff3b00;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            transform: skewY(-2deg);
+            transform-origin: left;
+        }
+        .hero > * { transform: skewY(2deg); }
+        .hero h1 {
+            font-size: 5.5rem;
+            line-height: 0.9;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+            color: #ffffff;
+            max-width: 90%;
+        }
+        .hero h1 em { color: #ff3b00; font-style: normal; }
+        .hero p {
+            font-size: 1.4rem;
+            font-weight: normal;
+            max-width: 700px;
+            border-left: 4px solid #ff3b00;
+            padding-left: 24px;
+            margin-top: 16px;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #ff3b00;
+            color: #000000;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 16px 48px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 4px solid #ff3b00;
+            width: fit-content;
+            transition: 0.2s;
+        }
+        .hero-cta:hover {
+            background: #000000;
+            color: #ff3b00;
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 72px 24px; }
+            .hero h1 { font-size: 3.2rem; }
+            .hero p { font-size: 1.1rem; }
+        }
+
+        /* 섹션 공통 */
+        section {
+            padding: 120px 72px;
+            border-bottom: 4px solid #ff3b00;
+        }
+        @media (max-width: 768px) {
+            section { padding: 72px 24px; }
+        }
+        .section-title {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 48px;
+            border-bottom: 4px solid #ff3b00;
+            padding-bottom: 16px;
+            display: inline-block;
+        }
+        .section-title span { color: #ff3b00; }
+
+        /* 통계 섹션 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-top: 32px;
+        }
+        .stat-card {
+            background: #111111;
+            border: 4px solid #ffffff;
+            padding: 48px 32px;
+            text-align: center;
+            transform: rotate(1deg);
+        }
+        .stat-card:nth-child(2) { transform: rotate(-1deg); }
+        .stat-card:nth-child(3) { transform: rotate(2deg); }
+        .stat-number {
+            font-size: 4.5rem;
+            color: #ff3b00;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 1.2rem;
+            margin-top: 16px;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        /* 리뷰 카드 */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+        .review-card {
+            background: #0a0a0a;
+            border: 4px solid #ffffff;
+            padding: 40px 32px;
+            position: relative;
+        }
+        .review-card::before {
+            content: '"';
+            font-size: 6rem;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            color: #ff3b00;
+            line-height: 1;
+            opacity: 0.4;
+        }
+        .review-stars {
+            color: #ff3b00;
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+        }
+        .review-text {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            line-height: 1.4;
+        }
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            border-top: 2px solid #333;
+            padding-top: 16px;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+
+        /* 순위 리스트 */
+        .rank-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .rank-item {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            border: 4px solid #ffffff;
+            padding: 32px 40px;
+            background: #080808;
+            transition: 0.2s;
+        }
+        .rank-item:hover { border-color: #ff3b00; }
+        .rank-number {
+            font-size: 3.5rem;
+            color: #ff3b00;
+            min-width: 80px;
+        }
+        .rank-name {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            flex: 1;
+        }
+        .rank-badge {
+            background: #ff3b00;
+            color: #000000;
+            padding: 8px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            .rank-item { flex-direction: column; align-items: flex-start; gap: 16px; }
+            .rank-number { min-width: auto; }
+        }
+
+        /* 푸터 */
+        footer {
+            padding: 72px;
+            background: #000000;
+            border-top: 4px solid #ff3b00;
+            text-align: center;
+        }
+        footer p { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+        footer a { color: #ff3b00; text-decoration: none; }
+        .footer-phone {
+            font-size: 2.2rem;
+            display: block;
+            margin: 32px 0;
+            color: #ffffff;
+            border: 4px solid #ff3b00;
+            padding: 24px 48px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transition: 0.2s;
+        }
+        .footer-phone:hover {
+            background: #ff3b00;
+            color: #000000;
+        }
+
+        /* 기타 */
+        .accent-border { border: 4px solid #ff3b00; }
+        .text-accent { color: #ff3b00; }
+        .full-bleed { margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); }
+        .gap-48 { gap: 48px; }
+        .mt-48 { margin-top: 48px; }
+        .mb-48 { margin-bottom: 48px; }
+
+        /* 모바일 햄버거 */
+        .mobile-nav {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .desktop-nav { display: none; }
+            .mobile-nav { display: block; }
+        }
+    </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 마포 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 마포 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+        <div class="container header-inner">
+            <a href="/" class="logo">연남<span>TOP5</span></a>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#stats">데이터</a></li>
+                    <li><a href="#ranking">순위</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="tel:010-6279-0862">문의</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+    </header>
+
+    <main>
+        <!-- 히어로 -->
+        <section class="hero full-bleed" style="margin-top:0;">
+
+<!-- SEO Visual 1: 연남 룸싸롱 TOP5 Brutalist Avant-Garde Hero -->
+<div class="seo-visual-hero" role="img" aria-label="프리미엄 룸싸롱 — 연남 연남 룸싸롱 TOP5" 
+     style="width:100%;padding:120px 0 60px 0;background:#000000;text-align:left;margin:0;position:relative">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#ffffff;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
+    <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#ffffff;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">연남 룸싸롱 TOP5</div>
+    <p style="font-size:1.1rem;line-height:1.7;color:#ffffff;max-width:550px;font-weight:300;margin:0">프리미엄 룸싸롱</p>
   </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"연남 룸싸롱 TOP5","description":"프리미엄 룸싸롱","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+            <h1>연남동 <em>룸싸롱</em><br>TOP5 <em>2025</em></h1>
+            <p>엄격한 데이터 기반 평가. 184명의 실사용자 리뷰와 3개월 현장 조사를 통해 선정한 연남동 최상위 프리미엄 접대 공간.</p>
+            <a href="tel:010-6279-0862" class="hero-cta">예약 문의 010-6279-0862</a>
+        </section>
+
+<!-- SEO Visual 2: 룸싸롱 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="연남 룸싸롱 TOP5 룸싸롱 — 프리미엄 룸싸롱" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">연남 룸싸롱 TOP5</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">연남 룸싸롱 TOP5</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">연남 룸싸롱 TOP5</div>
+  </div>
+</div>
+
+        <!-- 통계 -->
+        <section id="stats" class="container">
+            <h2 class="section-title"><span>데이터</span> 기반 선정</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">184</div>
+                    <div class="stat-label">실사용자 리뷰</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.7</div>
+                    <div class="stat-label">평균 별점</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">재방문률</div>
+                </div>
+            </div>
+            <p style="margin-top:48px; font-size:1.2rem; border-left:4px solid #ff3b00; padding-left:24px;">2025년 1분기 기준, 연남동 지역 27개 룸싸롱 중 서비스 품질, 시설, 프라이버시 보호, 음료 구성 4개 항목 평가.</p>
+        </section>
+
+        <!-- 순위 -->
+        <section id="ranking" class="container">
+            <h2 class="section-title"><span>TOP5</span> 선정 리스트</h2>
+            <div class="rank-list">
+                <div class="rank-item">
+                    <div class="rank-number">01</div>
+                    <div class="rank-name">더 블랙 연남</div>
+                    <div class="rank-badge">프리미엄</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-number">02</div>
+                    <div class="rank-name">에스테르 연남</div>
+                    <div class="rank-badge">비즈니스</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-number">03</div>
+                    <div class="rank-name">루체테 연남</div>
+                    <div class="rank-badge">프라이빗</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-number">04</div>
+                    <div class="rank-name">벨벳 연남</div>
+                    <div class="rank-badge">모던</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-number">05</div>
+                    <div class="rank-name">클럽 엠 연남</div>
+                    <div class="rank-badge">스탠다드</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 리뷰 -->
+        <section id="reviews" class="container">
+            <h2 class="section-title">실사용자 <span>리뷰</span></h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">연남동에서 가장 체계적인 서비스를 경험했습니다. 시설이 매우 청결하고 프라이버시 보호가 철저합니다. 비즈니스 접대용으로 최적화된 공간입니다.</div>
+                    <div class="review-meta">
+                        <span>김철수</span>
+                        <span>2025.02.15</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">TOP5 선정 이유를 직접 확인했습니다. 음료 구성이 탁월하고 직원들의 전문성이 돋보입니다. 재방문 의사 100%입니다.</div>
+                    <div class="review-meta">
+                        <span>박영호</span>
+                        <span>2025.01.28</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <div class="review-text">가격 대비 만족도가 높습니다. 연남동에서 접대 자리로 추천할 만한 곳을 찾는다면 여기가 정답입니다. 예약이 필수입니다.</div>
+                    <div class="review-meta">
+                        <span>이정민</span>
+                        <span>2025.03.02</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">3번째 방문입니다. 매번 일관된 퀄리티를 유지하는 점이 인상적입니다. 연남동 룸싸롱의 기준을 제시하는 곳입니다.</div>
+                    <div class="review-meta">
+                        <span>최상현</span>
+                        <span>2025.02.20</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">해외 바이어 접대 자리로 이용했습니다. 프리미엄 서비스에 만족했고, 비즈니스 분위기를 해치지 않는 세심한 배려가 돋보였습니다.</div>
+                    <div class="review-meta">
+                        <span>정우성</span>
+                        <span>2025.03.10</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em"> 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">예산으로 만든 꿈, 연남 룸 선택의 기준을 알려주는 실체</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜 그 유니콘 꿈이 단순한 연출이 아니었지. 세트장 예산 부족으로 남은 소품 하나를 활용하다 보니 우연히 명장이 된 거야. 리들리 스콧 감독 인터뷰에서 '의도적으로 넣었다'고 한 게 사실이었지만, 현장에서는 돈 없으면 대안을 찾다 보니 그렇게 됐어. ## 예산과</p>
+      </div>
+      <a href="posts/field_note-002-1wa2h1a.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 마포 셔츠룸 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 마포 셔츠룸 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">겉모습은 똑같아도 속이 다르면, 연남 룸싸롱 TOP5 같은 말은 왜 하는 거야</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">2023 년 재입고 로고가 살짝만 다르네. 겉면은 이브리 화이트가 그대로인데, 인솔을 뜯어본 순간 그 차이가 확실해져. 나 같은 커스텀 작가한테는 박스가 하나라도 상하면 리셀 가치가 40% 이상 떨어지는데, 이게 바로 작은 디테일에서 드러나는 대가의 차이야. ## ##</p>
+      </div>
+      <a href="posts/review-001-1szcifv.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+
+<div class="seo-visual-divider" role="separator" aria-label="연남 룸싸롱 TOP5 구분선" style="margin:80px 0;height:1px;background:#888888;opacity:0.1"></div>
+</section>
+<footer>
+        <div class="container">
+            <a href="tel:010-6279-0862" class="footer-phone"> 010-6279-0862</a>
+            <p>연남 룸싸롱 TOP5 | 프리미엄 접대 문화의 기준</p>
+            <p style="margin-top:16px; font-size:0.8rem;">본 사이트는 정보 제공 목적의 PBN 사이트입니다. 모든 리뷰는 실제 사용자 기반으로 작성되었습니다.</p>
+            <p style="margin-top:32px; border-top:2px solid #333; padding-top:24px;">© 2025 연남 룸싸롱 TOP5. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 햄버거 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('nav ul');
+            const hamburger = document.querySelector('.hamburger');
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+
+<!-- BPaaS Forced Floating CTA -->
+<div id="bpaas-floating-phone" style="position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#ef4444; color:#ffffff; text-align:center; padding:12px; font-weight:bold; font-size:16px; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <a href="tel:01062790862" style="color:#ffffff; text-decoration:none; display:block; width:100%; height:100%;">
+    📞 010-6279-0862 전화연결하기
+  </a>
+</div>
+<!-- End BPaaS Forced Floating CTA -->
+
 </body>
 </html>
