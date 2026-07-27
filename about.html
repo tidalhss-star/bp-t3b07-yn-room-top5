@@ -1,457 +1,91 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <title>연남 룸싸롱 TOP5 | 프리미엄 접대 & 비즈니스 공간 - 상세 정보</title>
-    <meta name="description" content="연남동 룸싸롱 TOP5 선정 기준과 실사용자 리뷰 기반 분석. 2025년 연남동 접대 문화의 정석. 전화 010-6279-0862로 예약 문의.">
-    <meta name="keywords" content="연남 룸싸롱, 연남동 룸싸롱, 연남 룸싸롱 TOP5, 연남동 접대, 연남동 유흥, 연남 룸싸롱 추천, 연남동 비즈니스 접대">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://t3b07-yn-room-top5.vercel.app/info">
-    <meta property="og:title" content="연남 룸싸롱 TOP5 | 프리미엄 접대 & 비즈니스 공간 - 상세 정보">
-    <meta property="og:description" content="연남동 룸싸롱 TOP5 선정 기준과 실사용자 리뷰 기반 분석. 2025년 연남동 접대 문화의 정석.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b07-yn-room-top5.vercel.app/info">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="연남 룸싸롱 TOP5 | 프리미엄 접대 & 비즈니스 공간 - 상세 정보">
-    <meta name="twitter:description" content="연남동 룸싸롱 TOP5 선정 기준과 실사용자 리뷰 기반 분석.">
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-        body {
-            font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.8;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background: #111;
-            border-bottom: 2px solid #ff0040;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(255, 0, 64, 0.3);
-        }
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #fff;
-            text-decoration: none;
-        }
-        .logo span {
-            color: #ff0040;
-            text-shadow: 0 0 10px #ff0040, 0 0 20px #ff0040;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-        nav a {
-            color: #ccc;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-            padding: 5px 0;
-            border-bottom: 2px solid transparent;
-        }
-        nav a:hover {
-            color: #ff0040;
-            border-bottom-color: #ff0040;
-            text-shadow: 0 0 8px rgba(255, 0, 64, 0.5);
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: #fff;
-            transition: all 0.3s;
-        }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: #111;
-                padding: 20px;
-                gap: 15px;
-                border-bottom: 2px solid #ff0040;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            }
-            nav ul.active {
-                display: flex;
-            }
-            nav a {
-                font-size: 1.1rem;
-                padding: 10px 0;
-            }
-        }
-
-        /* Hero Section */
-        .hero-info {
-            padding: 80px 0 60px;
-            text-align: center;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
-            border-bottom: 1px solid #222;
-        }
-        .hero-info h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        .hero-info h1 span {
-            color: #ff0040;
-            text-shadow: 0 0 15px rgba(255, 0, 64, 0.6);
-        }
-        .hero-info p {
-            font-size: 1.2rem;
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.9;
-        }
-        .hero-info .badge {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 8px 25px;
-            border: 2px solid #ff0040;
-            color: #ff0040;
-            font-weight: 700;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
-
-        /* Section */
-        .section-info {
-            padding: 70px 0;
-        }
-        .section-info h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-            color: #fff;
-            border-left: 5px solid #ff0040;
-            padding-left: 20px;
-        }
-        .section-info h2 span {
-            color: #ff0040;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .info-card {
-            background: #111;
-            border: 1px solid #222;
-            padding: 35px;
-            transition: all 0.3s;
-            position: relative;
-        }
-        .info-card:hover {
-            border-color: #ff0040;
-            box-shadow: 0 0 30px rgba(255, 0, 64, 0.15);
-            transform: translateY(-5px);
-        }
-        .info-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        .info-card h3 .num {
-            color: #ff0040;
-            margin-right: 10px;
-        }
-        .info-card p {
-            color: #bbb;
-            font-size: 0.95rem;
-            line-height: 1.9;
-            margin-bottom: 10px;
-        }
-        .info-card .highlight {
-            color: #ff0040;
-            font-weight: 700;
-        }
-        .info-card .data-point {
-            display: inline-block;
-            background: rgba(255, 0, 64, 0.1);
-            padding: 3px 12px;
-            border: 1px solid rgba(255, 0, 64, 0.3);
-            font-size: 0.8rem;
-            color: #ff0040;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 0;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-            margin: 50px 0;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .stat-item {
-            text-align: center;
-        }
-        .stat-item .number {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #ff0040;
-            text-shadow: 0 0 10px rgba(255, 0, 64, 0.4);
-        }
-        .stat-item .label {
-            color: #888;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 5px;
-        }
-
-        /* Review Table */
-        .review-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        .review-table th {
-            background: #1a1a1a;
-            color: #ff0040;
-            padding: 15px 20px;
-            text-align: left;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #ff0040;
-        }
-        .review-table td {
-            padding: 15px 20px;
-            border-bottom: 1px solid #222;
-            color: #ccc;
-        }
-        .review-table tr:hover td {
-            background: rgba(255, 0, 64, 0.05);
-        }
-        .review-table .rating {
-            color: #ff0040;
-            font-weight: 700;
-        }
-
-        /* FAQ */
-        .faq-list {
-            margin-top: 30px;
-        }
-        .faq-item {
-            border-bottom: 1px solid #222;
-            padding: 20px 0;
-        }
-        .faq-item .question {
-            font-weight: 700;
-            color: #fff;
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-item .question::after {
-            content: '+';
-            color: #ff0040;
-            font-size: 1.5rem;
-        }
-        .faq-item .answer {
-            color: #aaa;
-            margin-top: 15px;
-            line-height: 1.9;
-            display: none;
-        }
-        .faq-item.active .answer {
-            display: block;
-        }
-        .faq-item.active .question::after {
-            content: '-';
-        }
-
-        /* CTA */
-        .cta-section {
-            background: linear-gradient(135deg, #111 0%, #1a0a0a 100%);
-            border: 2px solid #ff0040;
-            padding: 50px;
-            text-align: center;
-            margin: 60px 0;
-        }
-        .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 15px;
-            letter-spacing: 3px;
-        }
-        .cta-section h2 span {
-            color: #ff0040;
-        }
-        .cta-section p {
-            color: #bbb;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-        }
-        .cta-phone {
-            display: inline-block;
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #ff0040;
-            text-decoration: none;
-            border: 3px solid #ff0040;
-            padding: 15px 50px;
-            transition: all 0.3s;
-            letter-spacing: 2px;
-        }
-        .cta-phone:hover {
-            background: #ff0040;
-            color: #000;
-            box-shadow: 0 0 40px rgba(255, 0, 64, 0.5);
-        }
-
-        /* Footer */
-        footer {
-            background: #0a0a0a;
-            border-top: 1px solid #222;
-            padding: 40px 0;
-            text-align: center;
-        }
-        footer p {
-            color: #555;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-info h1 {
-                font-size: 2.2rem;
-            }
-            .section-info h2 {
-                font-size: 1.6rem;
-            }
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-            .cta-phone {
-                font-size: 1.5rem;
-                padding: 12px 30px;
-            }
-            .stat-item .number {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>연남 룸싸롱 TOP5 - 정보</title>
+  <meta name="description" content="연남 지역 룸싸롱을 처음 찾는 분들을 위한 상세 정보와 이용 전 체크리스트, 상황별 추천 기준을 친절하게 안내합니다.">
+  <meta name="keywords" content="연남, 룸싸롱, 연남 룸싸롱 TOP5, 연남 나이트라이프, 연남 성인업소">
+  <link rel="canonical" href="https://yeonnam-review-room.namanavi.com/about.html">
+  <meta property="og:title" content="연남 룸싸롱 TOP5 - 정보">
+  <meta property="og:description" content="연남 지역 룸싸롱에 대한 자세한 정보와 선택 가이드를 제공합니다.">
+  <meta property="og:url" content="https://yeonnam-review-room.namanavi.com/about.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- 기존 CSS 파일은 그대로 사용합니다 -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <a href="/" class="logo">연남<span>룸싸롱</span> TOP5</a>
-            <nav>
-                <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul>
-                    <li><a href="/">홈</a></li>
-                    <li><a href="/info">정보</a></li>
-                    <li><a href="/review">리뷰</a></li>
-                    <li><a href="/contact">문의</a></li>
-                    <li><a href="tel:010-6279-0862" style="color:#ff0040;font-weight:800;">010-6279-0862</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="k-img-e0k7">
+    <nav>
+      <ul>
+        <li><a href="/index.html">홈</a></li>
+        <li><a href="/top5.html">TOP5</a></li>
+        <li><a href="/info.html">정보</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/contact.html">연락처</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="메뉴 토글">☰</button>
+    </nav>
+  </header>
 
-    <section class="hero-info">
-        <div class="container">
-            <h1>연남동 룸싸롱 <span>TOP5</span> 상세 정보</h1>
-            <p>2025년 연남동 접대 문화의 기준. 1,200건 이상의 실사용자 리뷰와 3년간의 업계 데이터를 기반으로 엄선한 프리미엄 비즈니스 공간. 객관적 지표와 현장 조사로 검증된 정보를 제공합니다.</p>
-            <div class="badge">DATA VERIFIED · 2025 EDITION</div>
-        </div>
+  <section class="hero">
+    <h1>연남 룸싸롱 TOP5 – 상세 정보 가이드</h1>
+    <p>연남에서 즐길 수 있는 최고의 룸싸롱을 찾고 계신가요? 이번 페이지에서는 각 업소의 분위기, 서비스 특성, 방문 시 유의사항 등을 깊이 있게 살펴봅니다. “Black Book Concierge” 스타일의 프리미엄 가이드로, 처음 방문하시는 분도 안심하고 선택할 수 있도록 돕습니다.</p>
+  </section>
+
+  <main class="content">
+    <!-- 소개 섹션 -->
+    <section class="info-section">
+      <h2>연남 룸싸롱, 왜 특별할까?</h2>
+      <p>연남은 예술적 감성, 트렌디한 분위기, 그리고 다양한 문화가 융합된 동네라서, 숙련된 플래셔와 독특한 인테리어를 갖춘 룸싸롱이 많이 밀집해 있습니다. 그중에서도 TOP5에 들린 곳은 서비스 퀄리티와 고객 만족도가 높은 곳을 엄선했으며, 각각의 특징이 뚜렷해 선택에 도움이 됩니다.</p>
+      <p>예를 들어, 어느 한 곳은 클래식한 재즈와 와인을 곁들인 프라이빗 룸을 제공하고, 또 다른 곳은 최신 사운드 시스템과 조명을 활용해 파티 분위기를 연출합니다. 이런 차이를 미리 파악하면, 본인의 목적에 맞는 공간을 쉽게 고를 수 있죠.</p>
     </section>
 
-    <section class="section-info">
-        <div class="container">
-            <h2>선정 <span>기준</span> & 데이터</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3><span class="num">01</span>서비스 품질</h3>
-                    <p>연남동 룸싸롱 TOP5 선정의 첫 번째 기준은 <span class="highlight">서비스 만족도</span>입니다. 2024년 7월부터 2025년 3월까지 수집된 1,247건의 리뷰를 분석하여 직원 응대, 응답 속도, 고객 맞춤형 서비스 제공 여부를 평가했습니다. 평균 평점 <span class="highlight">4.7/5.0</span> 이상의 업소만 선정했습니다.</p>
-                    <div>
-                        <span class="data-point">응대 속도 94%</span>
-                        <span class="data-point">맞춤 서비스 88%</span>
-                        <span class="data-point">재방문율 82%</span>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <h3><span class="num">02</span>시설 & 프라이버시</h3>
-                    <p>비즈니스 접대의 핵심은 <span class="highlight">프라이버시 보호</span>와 <span class="highlight">고급 시설</span>입니다. 연남동 룸싸롱 중 독립된 출입구, 방음 시스템, 최신 음향 시설을 갖춘 업소를 1차 필터링했습니다. 전체 23개 업소 중 <span class="highlight">상위 22%</span>만이 기준을 충족했습니다.</p>
-                    <div>
-                        <span class="data-point">방음 등급 A</span>
-                        <span class="data-point">개별 라운지</span>
-                        <span class="data-point">주차 지원 100%</span>
-                    </div>
+    <!-- 선택 기준 섹션 -->
+    <section class="criteria-section">
+      <h2>선택 기준 – 내가 꼭 확인해야 할 5가지 포인트</h2>
+      <p>① <strong>위치와 교통 편의성</strong>: 연남 골목에 숨겨진 입구인지, 대중교통과의 거리, 주차 가능 여부를 미리 체크하면 이동 스트레스를 크게 줄일 수 있습니다.</p>
+      <p>② <strong>룸 크기와 인원 제한</strong>: 작은 방은 2~3인에게 적합하고, 넓은 라운지는 6~8인 파티에 알맞습니다. 인원에 맞는 공간을 선택하면 불필요한 혼잡을 피할 수 있어요.</p>
+      <p>③ <strong>가격 정책</strong>: 기본 입장료 외에 음료·주류별 가격, 시음 서비스 유무 등을 비교해 예산을 정확히 잡아보세요. 쿠폰이나 프로모션이 있는지도 확인하면 좋습니다.</p>
+      <p>④ <strong>보안과 프라이버시</strong>: 외부 시야 차단, 방음 설비, 출입 통제 시스템 등 보안 수준을 살펴보면 개인 정보 보호가 보장됩니다.</p>
+      <p>⑤ <strong>특별 서비스</strong>: VIP 라운지, 전용 파티 플래너, 맞춤형 음악 선곡 등 부가 서비스가 있는지 확인하면 기대 이상의 경험을 할 수 있습니다.</p>
+    </section>
+
+    <!-- 상황별 추천 섹션 -->
+    <section class="scenario-section">
+      <h2>상황별 맞춤 추천 – 언제, 누구와, 왜 가야 할까?</h2>
+      <p><strong>친구와의 깜짝 파티</strong> – 4~6명 규모의 그룹이라면 사전 예약이 필수입니다. 넓은 라운지와 다채로운 주류 셀렉션을 갖춘 ‘라운지 A’를 추천합니다.</p>
+      <p><strong>연인과의 로맨틱 데이트</strong> – 조용하고 아늑한 분위기를 원한다면 ‘스위트 B’처럼 캔들 라이트와 와인 페어링이 가능한 프라이빗 룸을 선택해 보세요.</p>
+      <p><strong>비즈니스 미팅 겸 사교</strong> – 고급스러운 인테리어와 고음질 사운드가 있는 ‘클래식 C’는 프레젠테이션 설비와 와인 바를 동시에 이용할 수 있어 효율적입니다.</p>
+      <p><strong>새해 맞이 파티</strong> – 대규모 인원을 수용할 수 있는 ‘파티 D’는 특수 조명과 포토존이 마련돼 있어 추억을 남기기에 최적입니다.</p>
+    </section>
+
+    <!-- 체크리스트 섹션 -->
+    <section class="checklist-section">
+      <h2>방문 전 확인해야 할 체크리스트</h2>
+      <p>1️⃣ <strong>예약 방법</strong> – 전화, 카카오톡, 온라인 폼 중 어떤 채널을 지원하는지 확인하고, 예약 시 필요한 사전 정보(연령, 인원, 방문 목적)를 미리 준비합니다.</p>
+      <p>2️⃣ <strong>복장 규정</strong> – 일부 업소는 드레스 코드가 존재합니다. 캐주얼, 포멀, 혹은 특정 테마 복장이 있는지 사전에 확인하세요.</p>
+      <p>3️⃣ <strong>입장 연령 및 신분증</strong> – 한국 법령에 따라 19세 이상만 입장이 가능하므로, 신분증을 반드시 지참해야 합니다.</p>
+      <p>4️⃣ <strong>결제 방식</strong> – 현금, 카드, 모바일 결제 등 어떤 방식이 가능한지, 팁 정책은 어떻게 되는지 알아두면 결제 시 불편함이 없습니다.</p>
+      <p>5️⃣ <strong>금연/흡연 구역</strong> – 실내 흡연이 허용되는지 여부와 지정 흡연 구역 위치를 미리 파악해 두면 분위기를 해치지 않고 즐길 수 있습니다.</p>
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section class="faq-section">
+      <h2>자주 묻는 질문</h2>
+      <h3>Q1. 예약을 취소하려면 어떻게 해야 하나요?</h3>
+      <p>A1. 대부분의 업소는 최소 2시간 전까지 전화 또는 카카오톡으로 취소가 가능하며, 일부는 24시간 전 취소 시 전액 환불을 제공합니다. 취소 정책은 업소마다 다르니 사전에 확인하는 것이 좋습니다.</p>
+      <h3>Q2. 방음이 잘 되나요? 주변 소음이 걱정됩니다.</h3>
+      <p>A2. TOP5에 선정된 모든 룸싸롱은 방음 설비를 갖추고 있으며, 외부 소음이 최소화된 프라이빗 공간을 제공합니다. 특히 ‘라운지 A’와 ‘스위트 B’는 방음 등급이 높은 편입니다.</p>
+      <h3>Q3. 입장 시 별도의 복장 검사가 있나요?</h3>
+      <p>A3. 대체로 캐주얼 복장이 허용되지만, 고급 라운지나 스페셜 이벤트 룸은 정장 착용을 요구할 수 있습니다. 예약 시에 복장 규정을 꼭 확인해주세요.</p>
+      <h3>Q4. 음료와 주류는 얼마 정도 비용이 기대되나요?</h3>
+      <p>A4. 기본 입장료 외에 음료는 1인당 10,000~30,000원, 주류는 15,000~40,000원 정도가 일반적입니다. 패키지 이용 시 할인 혜택을 받을 수 있으니 문의해 보세요.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 연남 룸싸롱 TOP5 가이드. All rights reserved.</p>
+  </footer>
 </body>
 </html>
