@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b07-yn-room-top5</title>
+  <meta name="description" content="t3b07-yn-room-top5에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://yeonnam-review-room.namanavi.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ html { font-size: 18px; scroll-behavior: smooth; }
+ body {
+ font-family: 'Impact', 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+ background: #000000;
+ color: #ffffff;
+ line-height: 1.3;
+ padding: 0;
+ overflow-x: hidden;
+ }
+ .container {
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 0 72px;
+ }
+ /* 헤더 */
+ header {
+ border-bottom: 4px solid #ff3b00;
+ padding: 24px 0;
+ background: #000000;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-size: 2.2rem;
+ letter-spacing: -1px;
+ text-transform: uppercase;
+ color: #ff3b00;
+ text-decoration: none;
+ }
+ .logo span { color: #ffffff; }
+ nav ul { display: flex; gap: 32px; list-style: none; }
+ nav a {
+ color: #ffffff;
+ text-decoration: none;
+ font-size: 1.1rem;
+ text-transform: uppercase;
+ border: 3px solid transparent;
+ padding: 8px 12px;
+ transition: 0.2s;
+ }
+ nav a:hover {
+ border-color: #ff3b00;
+ color: #ff3b00;
+ }
+ .hamburger { display: none; flex-direction: column; gap: 6px; cursor: pointer; background: none; border: none; padding: 8px; }
+ .hamburger span { display: block; width: 32px; height: 4px; background: #ffffff; }
+ @media (max-width: 768px) {
+ .container { padding: 0 24px; }
+ nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #000000; border-bottom: 4px solid #ff3b00; padding: 24px; gap: 16px; }
+ nav ul.active { display: flex; }
+ .hamburger { display: flex; }
+ }
+
+ /* 히어로 */
+ .hero {
+ margin: 0;
+ padding: 120px 72px;
+ background: #000000;
+ border-bottom: 4px solid #ff3b00;
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ transform: skewY(-2deg);
+ transform-origin: left;
+ }
+ .hero > * { transform: skewY(2deg); }
+ .hero h1 {
+ font-size: 5.5rem;
+ line-height: 0.9;
+ letter-spacing: -3px;
+ text-transform: uppercase;
+ color: #ffffff;
+ max-width: 90%;
+ }
+ .hero h1 em { color: #ff3b00; font-style: normal; }
+ .hero p {
+ font-size: 1.4rem;
+ font-weight: normal;
+ max-width: 700px;
+ border-left: 4px solid #ff3b00;
+ padding-left: 24px;
+ margin-top: 16px;
+ }
+ .hero-cta {
+ display: inline-block;
+ background: #ff3b00;
+ color: #000000;
+ font-size: 1.8rem;
+ font-weight: bold;
+ padding: 16px 48px;
+ text-decoration: none;
+ text-transform: uppercase;
+ border: 4px solid #ff3b00;
+ width: fit-content;
+ transition: 0.2s;
+ }
+ .hero-cta:hover {
+ background: #000000;
+ color: #ff3b00;
+ }
+ @media (max-width: 768px) {
+ .hero { padding: 72px 24px; }
+ .hero h1 { font-size: 3.2rem; }
+ .hero p { font-size: 1.1rem; }
+ }
+
+ /* 섹션 공통 */
+ section {
+ padding: 120px 72px;
+ border-bottom: 4px solid #ff3b00;
+ }
+ @media (max-width: 768px) {
+ section { padding: 72px 24px; }
+ }
+ .section-title {
+ font-size: 3.5rem;
+ text-transform: uppercase;
+ letter-spacing: -2px;
+ margin-bottom: 48px;
+ border-bottom: 4px solid #ff3b00;
+ padding-bottom: 16px;
+ display: inline-block;
+ }
+ .section-title span { color: #ff3b00; }
+
+ /* 통계 섹션 */
+ .stats-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 48px;
+ margin-top: 32px;
+ }
+ .stat-card {
+ background: #111111;
+ border: 4px solid #ffffff;
+ padding: 48px 32px;
+ text-align: center;
+ transform: rotate(1deg);
+ }
+ .stat-card:nth-child(2) { transform: rotate(-1deg); }
+ .stat-card:nth-child(3) { transform: rotate(2deg); }
+ .stat-number {
+ font-size: 4.5rem;
+ color: #ff3b00;
+ line-height: 1;
+ }
+ .stat-label {
+ font-size: 1.2rem;
+ margin-top: 16px;
+ text-transform: uppercase;
+ }
+ @media (max-width: 768px) {
+ .stats-grid { grid-template-columns: 1fr; }
+ }
+
+ /* 리뷰 카드 */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 48px;
+ }
+ .review-card {
+ background: #0a0a0a;
+ border: 4px solid #ffffff;
+ padding: 40px 32px;
+ position: relative;
+ }
+ .review-card::before {
+ content: '"';
+ font-size: 6rem;
+ position: absolute;
+ top: -10px;
+ left: 16px;
+ color: #ff3b00;
+ line-height: 1;
+ opacity: 0.4;
+ }
+ .review-stars {
+ color: #ff3b00;
+ font-size: 1.6rem;
+ letter-spacing: 4px;
+ margin-bottom: 16px;
+ }
+ .review-text {
+ font-size: 1.1rem;
+ margin-bottom: 24px;
+ line-height: 1.4;
+ }
+ .review-meta {
+ display: flex;
+ justify-content: space-between;
+ font-size: 0.9rem;
+ border-top: 2px solid #333;
+ padding-top: 16px;
+ text-transform: uppercase;
+ }
+ @media (max-width: 768px) {
+ .reviews-grid { grid-template-columns: 1fr; }
+ }
+
+ /* 순위 리스트 */
+ .rank-list {
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ }
+ .rank-item {
+ display: flex;
+ align-items: center;
+ gap: 32px;
+ border: 4px solid #ffffff;
+ padding: 32px 40px;
+ background: #080808;
+ transition: 0.2s;
+ }
+ .rank-item:hover { border-color: #ff3b00; }
+ .rank-number {
+ font-size: 3.5rem;
+ color: #ff3b00;
+ min-width: 80px;
+ }
+ .rank-name {
+ font-size: 1.8rem;
+ text-transform: uppercase;
+ flex: 1;
+ }
+ .rank-badge {
+ background: #ff3b00;
+ color: #000000;
+ padding: 8px 24px;
+ font-size: 1rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ }
+ @media (max-width: 768px) {
+ .rank-item { flex-direction: column; align-items: flex-start; gap: 16px; }
+ .rank-number { min-width: auto; }
+ }
+
+ /* 푸터 */
+ footer {
+ padding: 72px;
+ background: #000000;
+ border-top: 4px solid #ff3b00;
+ text-align: center;
+ }
+ footer p { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; }
+ footer a { color: #ff3b00; text-decoration: none; }
+ .footer-phone {
+ font-size: 2.2rem;
+ display: block;
+ margin: 32px 0;
+ color: #ffffff;
+ border: 4px solid #ff3b00;
+ padding: 24px 48px;
+ width: fit-content;
+ margin-left: auto;
+ margin-right: auto;
+ transition: 0.2s;
+ }
+ .footer-phone:hover {
+ background: #ff3b00;
+ color: #000000;
+ }
+
+ /* 기타 */
+ .accent-border { border: 4px solid #ff3b00; }
+ .text-accent { color: #ff3b00; }
+ .full-bleed { margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); }
+ .gap-48 { gap: 48px; }
+ .mt-48 { margin-top: 48px; }
+ .mb-48 { margin-bottom: 48px; }
+
+ /* 모바일 햄버거 */
+ .mobile-nav {
+ display: none;
+ }
+ @media (max-width: 768px) {
+ .desktop-nav { display: none; }
+ .mobile-nav { display: block; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b07-yn-room-top5">
+  <meta property="og:description" content="t3b07-yn-room-top5에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://yeonnam-review-room.namanavi.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container header-inner">
+ <a href="/" class="logo">연남<span>TOP5</span></a>
+ <nav class="desktop-nav">
+ <ul>
+ <li><a href="#stats">데이터</a></li>
+ <li><a href="#ranking">순위</a></li>
+ <li><a href="#reviews">리뷰</a></li>
+ 
+ </ul>
+ </nav>
+ <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')" aria-label="메뉴 열기">
+ 
+ </button>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0378.html">연남 룸싸롱 TOP5 탐색하며 알아보는 마포 홍대 단체 가라오케 예약 가이드 및 시간대 활용</a>
+        <p class="post-item__summary">흔히 대중은 연남 룸싸롱 TOP5 정보를 찾을 때 복잡한 예약 과정이 필수적이라고 생각하곤 합니다. 하지만 마포와 홍대 일대에서 단체 모임을 계획할 때 가장 중요한 것은 정보의 정확성과 시간대별 효</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0379.html">연남 룸싸롱 TOP5 분석으로 보는 구글 인덱싱 속도 초고속 광회선 대역폭 최적화의 기술</a>
+        <p class="post-item__summary">웹사이트의 콘텐츠가 검색 결과에 빠르게 노출되기 위해서는 안정적인 서버 환경과 대역폭의 확보가 선행되어야 합니다. 연남 룸싸롱 TOP5와 같은 경쟁력 있는 키워드를 타겟팅할 때도 서버의 물리적 응답</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0380.html">연남 룸싸롱 TOP5 참고하며 확인하는 구글 신뢰 지수 모발이식 솔루션의 도메인 파워 증폭 전략</a>
+        <p class="post-item__summary">당신은 현재 웹사이트의 도메인 신뢰도가 검색 노출 순위와 직결된다는 사실을 얼마나 실감하고 계십니까? 연남 룸싸롱 TOP5와 같은 인기 키워드를 공략하려는 의도라면 콘텐츠의 양보다 질적인 측면에서 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0067.html">연남 룸싸롱 TOP5 기준과 연남 유흥 추천정보 구성 전략</a>
+        <p class="post-item__summary">연남 룸싸롱 TOP5를 선정할 때 충족해야 할 조건들은 생각보다 까다롭습니다. 청결한 시설 관리와 서비스의 일관성 그리고 투명한 운영 체계가 뒷받침되지 않으면 상위권에 머물기 어렵습니다. 이용객의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0068.html">연남 룸싸롱 TOP5 유형 분석을 통한 마곡 가라오케 추천정보 활용</a>
+        <p class="post-item__summary">연남 룸싸롱 TOP5 순위를 보면서 과연 어떤 기준으로 장소를 고르는 것이 가장 합리적일지 고민해 본 적이 있으십니까? 많은 업체가 비슷한 홍보 문구를 내세우고 있지만, 실제 이용자가 체감하는 만족</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0069.html">연남 룸싸롱 TOP5 정보로 마곡 유흥 추천정보 확인하는 법</a>
+        <p class="post-item__summary">연남 룸싸롱 TOP5 리스트를 검색하는 이들이라면 자연스럽게 마곡 지역의 유흥 환경에도 관심을 두기 마련입니다. 수많은 정보 속에서 진실한 업소를 가려내는 것은 방문자의 안전과 직결되는 중요한 과정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0070.html">연남 룸싸롱 TOP5 비교로 살펴보는 합정 노래방 추천정보 가이드</a>
+        <p class="post-item__summary">연남 룸싸롱 TOP5 리스트와 합정 인근의 노래방을 고민할 때 가장 중요한 것은 두 선택지의 명확한 차이를 파악하는 일입니다. 룸 형태의 유흥업소와 일반 노래방은 제공되는 서비스와 가격 구조에서 확</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0071.html">연남 룸싸롱 TOP5 검색자가 놓치는 연남 클럽 추천정보 예약 팁</a>
+        <p class="post-item__summary">연남 룸싸롱 TOP5를 찾는 분들이 종종 클럽 방문까지 고려하곤 합니다. 하지만 많은 이들이 익숙하지 않은 예약 절차로 인해 현장에서 낭패를 보곤 합니다. 가장 먼저 짚어야 할 실패 지점은 방문 당</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0072.html">연남 룸싸롱 TOP5 참고하여 확인하는 합정 셔츠룸 추천정보 리스트</a>
+        <p class="post-item__summary">연남 룸싸롱 TOP5 리스트를 검토해 본 경험은 합정 인근의 셔츠룸을 선택할 때 큰 도움이 됩니다. 단순히 분위기만 보고 결정하기보다는 객관적인 체크리스트를 활용해 실수를 줄여야 합니다. 특히 위치</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0073.html">연남 룸싸롱 TOP5 관련 공덕 가라오케 추천정보와 이용 수칙</a>
+        <p class="post-item__summary">낯선 지역에서 비즈니스 미팅을 마친 뒤 적당한 유흥 시설을 찾는 일은 생각보다 까다롭습니다. 연남 룸싸롱 TOP5 같은 키워드를 검색하다가 본인의 동선과 더 가까운 공덕 일대를 고려하는 경우가 많습</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0074.html">연남 룸싸롱 TOP5 대신 찾는 상수 마사지 추천정보와 예약 팁</a>
+        <p class="post-item__summary">흔히들 마사지 숍이라고 하면 퇴근 후 피로를 푸는 기능만을 생각하지만, 최근에는 서비스의 질에 대한 오해가 많습니다. 연남 룸싸롱 TOP5 같은 검색 결과를 보며 자극적인 유흥을 찾는 분들도 있지만</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0075.html">연남 룸싸롱 TOP5 고민 끝에 선택할 망원 노래방 추천정보 가이드</a>
+        <p class="post-item__summary">노래방을 고를 때 만족을 결정짓는 충족 조건들은 생각보다 명확합니다. 연남 룸싸롱 TOP5 같은 화려한 유흥보다는 가볍게 노래를 부르며 회포를 풀 장소를 찾는 망원 방문객들이 늘고 있습니다. 시설의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0076.html">연남 룸싸롱 TOP5 대신 홍대 노래방 추천정보를 찾으시나요</a>
+        <p class="post-item__summary">혹시 오늘 밤 친구들과 혹은 동료들과 함께 즐거운 시간을 보내기 위해 연남 룸싸롱 TOP5 목록을 뒤지고 계신가요? 홍대 지역이라면 그보다 더 건전하고 신나게 노래를 부를 수 있는 대안이 많습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0077.html">연남 룸싸롱 TOP5 관련 공덕 셔츠룸 추천정보와 확인 절차</a>
+        <p class="post-item__summary">주변 지역의 유흥 문화를 탐색하다 보면 연남 룸싸롱 TOP5와 같은 순위 정보에 관심을 두게 되지만, 실질적인 선택을 위해서는 공덕 지역의 환경을 더 깊이 살펴야 합니다. 특히 이색적인 유흥 형태인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">연남 룸싸롱 TOP5 정보</a>
+        <p class="post-item__summary">이번 콘텐츠는 연남 일대에서 인기 있는 룸싸롱을 중심으로 소개합니다. 관련 정보를 찾는 방문자들은 지역의 분위기나 서비스 종류에 대해 궁금해하며, 구체적인 안내 내용을 원할 경우 전문 정보를 참고하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">연남 룸싸롱 TOP5</a>
+        <p class="post-item__summary">서울의 중심에 위치한 연남동은 독특한 문화와 분위기를 자랑하는 지역으로, 많은 방문객들이 찾는 명소가 되었습니다. 이러한 연남동을 대표하는 공간 중 하나가 바로 룸싸롱으로, 이곳은 주로 비즈니스 미</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">연남 동 지역 룸싸롱 정보 안내</a>
+        <p class="post-item__summary">서울시 서대문구에 위치한 연남동은 젊은 층과 예술가들이 많이 모여 사는 지역으로 알려져 있습니다. 이 지역에는 다양한 취향의 손님들을 맞이하는 여러类型的 휴식 공간이 존재합니다. 룸싸롱은 주로 특정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">연남 룸싸롱 TOP5</a>
+        <p class="post-item__summary">연남은 서울에서 독보적인 분위기 덕분에 유흥 산업이 발달한 지역 중 하나입니다. 이 지역에서는 다양한 룸싸롱이 자리 잡고 있으며, 방문객들은 각기 다른 테마와 실내 디자인을 갖춘 공간을 선택할 수 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">연남 룸싸롱 TOP5</a>
+        <p class="post-item__summary">연남 지역의 룸싸롱을 방문하거나 정보를 검색할 때는 안정적인 인터넷 연결이 필수적입니다. 고객들은 주로 스마트폰을 통해 장소를 찾거나 예약 상황을 확인하기 때문에, 실내에서 명확한 통신 신호가 확보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-1szcifv.html">겉모습은 똑같아도 속이 다르면, 연남 룸싸롱 TOP5 같은 말은 왜 하는 거야</a>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
