@@ -21,6 +21,61 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0297.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0298.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0300.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0302.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/juice-2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/normal-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/normal-3.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/review-001-1szcifv.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/juice-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-review-room.namanavi.com/posts/normal-2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0290.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -56,32 +111,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0297.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0298.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0299.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0300.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0301.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260719-0302.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -177,46 +212,6 @@
   </url>
   <url>
     <loc>https://yeonnam-review-room.namanavi.com/posts/gemini-coverage-20260722-0077.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/juice-1.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/juice-2.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/normal-1.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/normal-2.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/normal-3.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts/review-001-1szcifv.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-review-room.namanavi.com/posts-2.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
